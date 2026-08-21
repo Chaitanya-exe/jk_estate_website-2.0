@@ -1,39 +1,70 @@
+const links = [
+  { label: "About", href: "#about" },
+  { label: "Properties", href: "#properties" },
+  { label: "Services", href: "#services" },
+  { label: "Contact", href: "#contact" },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 pt-16 pb-24">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold tracking-tighter text-red-600">ESTATE<span className="text-black">CORE</span></span>
-            </div>
-            <p className="text-gray-600 max-w-sm">
-              Refining the standard of commercial real estate. We believe that the space you work in is the foundation of your success.
+    <footer className="footer">
+      <div className="container-shell">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <a href="#" className="footer-logo">
+              ESTATE<span>CORE</span>
+            </a>
+
+            <p className="footer-description">
+              Refining the standard of commercial real estate. We believe the
+              space you work in is more than a location — it is part of what
+              makes your business possible.
             </p>
           </div>
+
           <div>
-            <h4 className="font-bold mb-6 text-gray-900">Quick Links</h4>
-            <ul className="space-y-3 text-gray-600 text-sm">
-              <li><a href="#properties" className="hover:text-red-600">Properties</a></li>
-              <li><a href="#services" className="hover:text-red-600">Services</a></li>
-              <li><a href="#about" className="hover:text-red-600">About</a></li>
-              <li><a href="#contact" className="hover:text-red-600">Contact</a></li>
+            <h3 className="footer-heading">Explore</h3>
+
+            <ul className="footer-links">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="footer-link">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
+
           <div>
-            <h4 className="font-bold mb-6 text-gray-900">Contact</h4>
-            <ul className="space-y-3 text-gray-600 text-sm">
-              <li>123 Commerce Way</li>
-              <li>Suite 500</li>
-              <li>New York, NY 10001</li>
-              <li>info@estatecore.com</li>
-            </ul>
+            <h3 className="footer-heading">Contact</h3>
+
+            <div className="footer-contact">
+              <span>123 Commerce Way</span>
+              <span>Suite 500</span>
+              <span>New York, NY 10001</span>
+
+              <a
+                href="mailto:info@estatecore.com"
+                className="footer-link mt-2"
+              >
+                info@estatecore.com
+              </a>
+
+              <a href="tel:+12125550184" className="footer-link">
+                +1 (212) 555-0184
+              </a>
+            </div>
           </div>
         </div>
-        <div className="border-t border-gray-100 pt-8">
-          <p className="text-center text-gray-400 text-xs">
-            &copy; {new Date().getFullYear()} EstateCore Real Estate. All rights reserved.
+
+        <div className="footer-bottom">
+          <p>
+            © {new Date().getFullYear()} EstateCore Real Estate. All rights
+            reserved.
           </p>
+
+          <p>Built around better spaces.</p>
         </div>
       </div>
     </footer>

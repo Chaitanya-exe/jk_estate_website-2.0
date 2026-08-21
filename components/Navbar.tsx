@@ -1,25 +1,88 @@
 "use client";
-import Link from 'next/link';
+
+import { useState } from "react";
+import Link from "next/link";
+
+const links = [
+  { label: "About", href: "#about" },
+  { label: "Properties", href: "#properties" },
+  { label: "Services", href: "#services" },
+];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => setOpen(false);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold tracking-tighter text-red-600">ESTATE<span className="text-black">CORE</span></span>
-            </div>
+    <nav className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-5">
+      <div className="glass mx-auto max-w-6xl rounded-full">
+        <div className="flex h-[62px] items-center justify-between px-5 sm:px-7">
+          <Link
+            href="/"
+            onClick={closeMenu}
+            className="font-display text-[1.25rem] font-semibold tracking-[-0.04em] text-[#134E4A]"
+            aria-label="EstateCore home"
+          >
+            J.K<span className="text-[#0F766E]">ESTATE</span>
+          </Link>
+
+          <div className="hidden items-center gap-8 md:flex">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="nav-link text-[0.72rem] font-bold uppercase tracking-[0.13em] text-slate-600 transition-colors hover:text-[#0F766E]"
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <Link
+              href="#contact"
+              className="button button-primary min-h-[40px] px-5 text-[0.68rem]"
+            >
+              Contact
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
-              <Link href="#properties" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Properties</Link>
-              <Link href="#services" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">Services</Link>
-              <Link href="#about" className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors">About</Link>
-              <Link href="#contact" className="px-5 py-2 bg-red-600 text-white text-sm font-bold rounded-md hover:bg-red-700 transition-all">Contact Us</Link>
-            </div>
-          </div>
+
+          <button
+            type="button"
+            className="mobile-menu-button flex h-10 w-10 items-center justify-center rounded-full bg-[#134E4A] text-white md:hidden"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span className="text-lg leading-none">{open ? "×" : "☰"}</span>
+          </button>
         </div>
+
+        {open && (
+          <div className="px-5 pb-5 md:hidden">
+            <div className="mt-1 rounded-3xl bg-white/70 p-2 backdrop-blur-xl">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-[#eef8f6] hover:text-[#0F766E]"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+              <Link
+                href="#contact"
+                onClick={closeMenu}
+                className="button button-primary mt-2 w-full"
+              >
+                Contact us
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -1,23 +1,37 @@
-export default function Stats() {
-  const stats = [
-    { label: "Yearly Experience", value: "15+" },
-    { label: "Properties", value: "500+" },
-    { label: "Clients", value: "200+" },
-    { label: "Success Rate", value: "98%" },
-  ];
+const stats = [
+  { label: "Years of experience", value: "15+" },
+  { label: "Properties", value: "500+" },
+  { label: "Clients served", value: "200+" },
+  { label: "Success rate", value: "98%" },
+];
 
+export default function Stats() {
   return (
-    <div className="bg-gray-50 py-16 border-y border-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-4xl font-bold text-red-600 mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wider font-medium">{stat.label}</div>
-            </div>
-          ))}
+    <section className="relative z-20 -mt-12 pb-8">
+      <div className="container-shell">
+        <div className="glass-strong rounded-[28px] px-5 py-7 sm:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={`px-4 py-4 text-center sm:px-8 ${
+                  index < stats.length - 1
+                    ? "md:border-r md:border-[#134E4A]/10"
+                    : ""
+                }`}
+              >
+                <div className="font-display text-4xl font-medium tracking-[-0.04em] text-[#134E4A] sm:text-5xl">
+                  {stat.value}
+                </div>
+
+                <div className="mt-2 text-[0.63rem] font-bold uppercase tracking-[0.14em] text-[#71817e]">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
