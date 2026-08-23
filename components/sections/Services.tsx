@@ -31,7 +31,7 @@ export default function Services() {
             <span className="text-gradient"> beyond the property.</span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-500">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#756464]">
             From the first search to long-term portfolio strategy, we bring
             clarity to every stage of the commercial real estate lifecycle.
           </p>
@@ -44,24 +44,24 @@ export default function Services() {
               className="glass group rounded-[28px] p-7 transition-transform duration-300 hover:-translate-y-2 sm:p-9"
             >
               <div className="mb-16 flex items-start justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e8f7f4] text-[#0F766E]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#fdf0f0] text-[#991B1B]">
                   <ServiceIcon type={service.icon} />
                 </div>
 
-                <span className="font-display text-sm text-[#8aa09c]">
+                <span className="font-display text-sm text-[#a18d8d]">
                   {service.number}
                 </span>
               </div>
 
-              <h3 className="font-display text-2xl font-medium tracking-[-0.03em] text-[#134E4A]">
+              <h3 className="font-display text-2xl font-medium tracking-[-0.03em] text-[#450A0A]">
                 {service.title}
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-slate-500">
+              <p className="mt-4 text-sm leading-7 text-[#756464]">
                 {service.desc}
               </p>
 
-              <div className="mt-8 h-px w-0 bg-[#0F766E] transition-all duration-500 group-hover:w-12" />
+              <div className="mt-8 h-px w-0 bg-[#991B1B] transition-all duration-500 group-hover:w-12" />
             </article>
           ))}
         </div>

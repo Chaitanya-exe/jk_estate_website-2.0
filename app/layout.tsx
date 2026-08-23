@@ -15,9 +15,9 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "EstateCore | Commercial Real Estate",
+  title: "J.K Estate | Commercial Real Estate",
   description:
-    "Premium commercial real estate solutions for ambitious businesses and investors.",
+    "Premium commercial real estate solutions for businesses, investors, and ambitious teams.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

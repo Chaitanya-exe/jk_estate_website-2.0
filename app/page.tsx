@@ -4,6 +4,7 @@ import Stats from "@/components/sections/Stats";
 import Properties from "@/components/sections/Properties";
 import Services from "@/components/sections/Services";
 import Footer from "@/components/Footer";
+import ScrollStory from "@/components/sections/ScrollStory";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
           <div className="container-shell">
             <div className="about-grid">
               <div>
-                <span className="eyebrow">The EstateCore Standard</span>
+                <span className="eyebrow">The J.K Estate Standard</span>
 
                 <h2 className="section-title mt-5">
                   Spaces chosen with
@@ -63,7 +64,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+        <ScrollStory />
         <Properties />
         <Services />
 
@@ -86,7 +88,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <a href="mailto:info@estatecore.com" className="button button-light">
+              <a
+                href="mailto:jkestate99@gmail.com"
+                className="button button-light"
+              >
                 Speak with an advisor
                 <span aria-hidden="true">↗</span>
               </a>

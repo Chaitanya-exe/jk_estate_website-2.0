@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <a href="#" className="footer-logo">
-              ESTATE<span>CORE</span>
+              J.K Estate<span>CORE</span>
             </a>
 
             <p className="footer-description">
@@ -48,11 +48,11 @@ export default function Footer() {
                 href="mailto:info@estatecore.com"
                 className="footer-link mt-2"
               >
-                info@estatecore.com
+                jkestate99@gmail.com
               </a>
 
-              <a href="tel:+12125550184" className="footer-link">
-                +1 (212) 555-0184
+              <a href="tel:+917982500442" className="footer-link">
+                +91 (798) 2500442 
               </a>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} EstateCore Real Estate. All rights
+            © {new Date().getFullYear()} J.K Estate. All rights
             reserved.
           </p>
 

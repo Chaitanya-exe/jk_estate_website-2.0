@@ -21,10 +21,10 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={closeMenu}
-            className="font-display text-[1.25rem] font-semibold tracking-[-0.04em] text-[#134E4A]"
+            className="font-display text-[1.25rem] font-semibold tracking-[-0.04em] text-[#450A0A]"
             aria-label="EstateCore home"
           >
-            J.K<span className="text-[#0F766E]">ESTATE</span>
+            J.K<span className="text-[#991B1B]">Estate</span>
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="nav-link text-[0.72rem] font-bold uppercase tracking-[0.13em] text-slate-600 transition-colors hover:text-[#0F766E]"
+                className="nav-link text-[0.72rem] font-bold uppercase tracking-[0.13em] text-[#756464] transition-colors hover:text-[#991B1B]"
               >
                 {link.label}
               </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="mobile-menu-button flex h-10 w-10 items-center justify-center rounded-full bg-[#134E4A] text-white md:hidden"
+            className="mobile-menu-button flex h-10 w-10 items-center justify-center rounded-full bg-[#450A0A] text-white md:hidden"
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -60,13 +60,13 @@ export default function Navbar() {
 
         {open && (
           <div className="px-5 pb-5 md:hidden">
-            <div className="mt-1 rounded-3xl bg-white/70 p-2 backdrop-blur-xl">
+            <div className="mt-1 rounded-3xl bg-white/75 p-2 backdrop-blur-xl">
               {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-[#eef8f6] hover:text-[#0F766E]"
+                  className="block rounded-2xl px-4 py-3 text-sm font-semibold text-[#523d3d] hover:bg-[#fdf2f2] hover:text-[#991B1B]"
                 >
                   {link.label}
                 </Link>

@@ -16,15 +16,15 @@ export default function Stats() {
                 key={stat.label}
                 className={`px-4 py-4 text-center sm:px-8 ${
                   index < stats.length - 1
-                    ? "md:border-r md:border-[#134E4A]/10"
+                    ? "md:border-r md:border-[#450A0A]/10"
                     : ""
                 }`}
               >
-                <div className="font-display text-4xl font-medium tracking-[-0.04em] text-[#134E4A] sm:text-5xl">
+                <div className="font-display text-4xl font-medium tracking-[-0.04em] text-[#450A0A] sm:text-5xl">
                   {stat.value}
                 </div>
 
-                <div className="mt-2 text-[0.63rem] font-bold uppercase tracking-[0.14em] text-[#71817e]">
+                <div className="mt-2 text-[0.63rem] font-bold uppercase tracking-[0.14em] text-[#756464]">
                   {stat.label}
                 </div>
               </div>

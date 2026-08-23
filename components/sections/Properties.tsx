@@ -36,17 +36,14 @@ export default function Properties() {
             </h2>
           </div>
 
-          <p className="max-w-sm text-sm leading-7 text-slate-500">
+          <p className="max-w-sm text-sm leading-7 text-[#756464]">
             A curated selection of commercial spaces chosen for location,
             quality, and long-term potential.
           </p>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-          <PropertyCard
-            item={listings[0]}
-            featured
-          />
+          <PropertyCard item={listings[0]} featured />
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
             {listings.slice(1).map((item) => (
@@ -68,7 +65,7 @@ function PropertyCard({
 }) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-[28px] bg-[#103a37] ${
+      className={`group relative overflow-hidden rounded-[28px] bg-[#2b0808] ${
         featured ? "min-h-[650px]" : "min-h-[310px]"
       }`}
     >
@@ -78,7 +75,7 @@ function PropertyCard({
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#062a28] via-[#062a28]/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#2b0808] via-[#2b0808]/20 to-transparent" />
 
       <div className="absolute left-5 top-5">
         <span className="rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[0.6rem] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md">
@@ -102,7 +99,7 @@ function PropertyCard({
             </h3>
           </div>
 
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#134E4A] transition-transform duration-300 group-hover:-rotate-45">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#450A0A] transition-transform duration-300 group-hover:-rotate-45">
             ↗
           </span>
         </div>
