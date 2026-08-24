@@ -19,7 +19,7 @@ export default function Home() {
         <Hero />
         <Stats />
 
-        <section id="about" className="section-shell">
+        <section id="about" className="section-shell -mt-0.5">
           <div className="container-shell">
             <div className="about-grid">
               <div>
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </section>
         
-        <ScrollStory />
+        {/* <ScrollStory /> */}
         <Properties />
         <Services />
 

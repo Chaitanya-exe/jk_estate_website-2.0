@@ -7,7 +7,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="relative z-20 -mt-12 pb-8">
+    <section className="relative z-20 -mt-0 pb-4 pt-20">
       <div className="container-shell">
         <div className="glass-strong rounded-[28px] px-5 py-7 sm:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4">

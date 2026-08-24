@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#2b0808] via-transparent to-[#2b0808]/25" />
       </div>
 
-      <div className="container-shell relative z-10 flex min-h-[760px] items-end pb-20 pt-36 sm:min-h-[850px] sm:pb-24">
+      <div className="container-shell relative z-10 flex min-h-[760px] items-start pt-24 pb-20 sm:min-h-[850px] sm:pb-24">
         <div className="grid w-full items-end gap-12 lg:grid-cols-[1fr_390px]">
           <div className="max-w-4xl">
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md">
