@@ -1,6 +1,8 @@
 const heroImage =
   "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&w=2000";
 
+import { motion } from 'framer-motion';
+
 export default function Hero() {
   return (
     <section className="relative min-h-[760px] overflow-hidden bg-[#2b0808] sm:min-h-[850px]">
