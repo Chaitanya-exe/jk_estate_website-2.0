@@ -104,7 +104,7 @@ export default function Hero() {
           >
             <div className="flex items-center justify-between border-b border-[#450A0A]/10 pb-5">
             <motion.span
-              className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-[#756464]"
+              className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/70"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.06, duration: 0.45 }}
@@ -123,7 +123,7 @@ export default function Hero() {
             </div>
 
             <div className="py-6">
-              <p className="font-display text-3xl leading-tight tracking-[-0.03em] text-[#450A0A]">
+              <p className="font-display text-3xl leading-tight tracking-[-0.03em] text-white/70">
                 Spaces built around how modern businesses actually work.
               </p>
             </div>
