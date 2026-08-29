@@ -1,7 +1,24 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
 const heroImage =
   "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&w=2000";
 
-import { motion } from 'framer-motion';
+const heroEnter = {
+  hidden: { y: 24, opacity: 0, filter: "blur(6px)" },
+  visible: { y: 0, opacity: 1, filter: "blur(0px)" },
+};
+
+const heroTransition = {
+  type: "spring",
+  stiffness: 450,
+  damping: 42,
+};
+
+const stagger = (i: number) => ({
+  transition: { delay: i * 0.06, ease: "[0.22,1,0.36,1]" },
+});
 
 export default function Hero() {
   return (
@@ -22,26 +39,49 @@ export default function Hero() {
 
       <div className="container-shell relative z-10 flex min-h-[760px] items-start pt-24 pb-20 sm:min-h-[850px] sm:pb-24">
         <div className="grid w-full items-end gap-12 lg:grid-cols-[1fr_390px]">
-          <div className="max-w-4xl">
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <motion.div
+              className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-white/75 backdrop-blur-md"
+              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
               <span className="h-1.5 w-1.5 rounded-full bg-[#e7a1a1]" />
               Commercial real estate, redefined
-            </div>
+            </motion.div>
 
-            <h1 className="font-display text-[clamp(3.7rem,8vw,7.8rem)] font-medium leading-[0.9] tracking-[-0.055em] text-white">
+            <motion.h1
+              className="font-display text-[clamp(3.7rem,8vw,7.8rem)] font-medium leading-[0.9] tracking-[-0.055em] text-white"
+              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
               Find the space
               <span className="block text-[#e7a1a1]">
                 behind your next move.
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+            <motion.p
+              className="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg"
+              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.28, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
               Premium commercial real estate solutions for businesses,
               investors, and ambitious teams looking for spaces with
               long-term potential.
-            </p>
+            </motion.p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <motion.div
+              className="mt-9 flex flex-col gap-3 sm:flex-row"
+              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: 0.36, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            >
               <a href="#properties" className="button button-light">
                 Explore properties
                 <span aria-hidden="true">↓</span>
@@ -54,18 +94,32 @@ export default function Hero() {
                 Book a consultation
                 <span aria-hidden="true">↗</span>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="glass-strong rounded-[28px] p-6 sm:p-7">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.04, ease: [0.22,1,0.36,1] }}
+          >
             <div className="flex items-center justify-between border-b border-[#450A0A]/10 pb-5">
-              <span className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-[#756464]">
-                Current focus
-              </span>
+            <motion.span
+              className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-[#756464]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.06, duration: 0.45 }}
+            >
+              Current focus
+            </motion.span>
 
-              <span className="rounded-full bg-[#fdf0f0] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-wider text-[#991B1B]">
-                2026
-              </span>
+            <motion.span
+              className="rounded-full bg-[#fdf0f0] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-wider text-[#991B1B]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.08, duration: 0.45 }}
+            >
+              2026
+            </motion.span>
             </div>
 
             <div className="py-6">
@@ -95,7 +149,7 @@ export default function Hero() {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
