@@ -458,8 +458,9 @@ a {
 
 .map-frame {
   display: block;
+  height: auto;
   width: 100%;
-  aspect-ratio: 6 / 5;
+  aspect-ratio: 5 / 3;
   filter: saturate(1.1);
 }
 

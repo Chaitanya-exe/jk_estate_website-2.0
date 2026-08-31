@@ -15,14 +15,14 @@ const SOCIALS = [
   { label: "LinkedIn", href: "#" },
 ];
 
-const EMAIL = "info@estatecore.com";
+const EMAIL = "jkestate99@gmail.com";
 const PHONE = "+91 (798) 2500442";
 const ADDRESS_FULL = "Suite 500\n123 Commerce Way\nNew York, NY 10001";
 
 const buildMapUrl = () => {
   const fragments =
     "q=123+Commerce+Way%2C+New+York&z=18&output=embed&ll=40.7128,-74.0060";
-  return `https://www.google.com/maps/embed?${fragments}`;
+  return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14015.985294548173!2d77.23281270581413!3d28.569873111180797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3ad9f0c6e9d%3A0xf63093b4d1864b92!2sLajpat%20Nagar%20II%2C%20Lajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110024!5e0!3m2!1sen!2sin!4v1788170515709!5m2!1sen!2sin&z=25`;
 };
 
 export default function Footer() {
@@ -47,14 +47,14 @@ export default function Footer() {
             >
               {EMAIL}
             </a>
-
+            <br />
             <a href={`tel:${PHONE}`} className="footer-link">
               {PHONE}
             </a>
 
             <ul className="footer-socials">
               {SOCIALS.map((social) => (
-                <li key={social.href}>
+                <li key={crypto.randomUUID()}>
                   <a
                     href={social.href}
                     className="social-link"
@@ -96,7 +96,7 @@ export default function Footer() {
                 />
               </div>
 
-              <div className="map-caption">
+              {/* <div className="map-caption">
                 <span className="map-caption-pin" aria-hidden="true">
                   ◉
                 </span>
@@ -107,7 +107,7 @@ export default function Footer() {
                     </span>
                   ))}
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
