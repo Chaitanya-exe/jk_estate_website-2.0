@@ -350,14 +350,14 @@ a {
 
 .footer-main {
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr 1fr;
-  gap: 70px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 40px;
   padding: 80px 0 70px;
   border-top: 1px solid rgba(69, 10, 10, 0.11);
 }
 
 .footer-brand {
-  max-width: 430px;
+  max-width: 360px;
 }
 
 .footer-logo {
@@ -383,7 +383,7 @@ a {
 }
 
 .footer-heading {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   color: var(--primary-dark);
   font-size: 0.72rem;
   font-weight: 800;
@@ -410,13 +410,80 @@ a {
   color: var(--primary);
 }
 
-.footer-contact {
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #756464;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(117, 100, 100, 0.35);
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.social-link:hover {
+  color: #ffffff;
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+/* MAP WIDGET */
+
+.footer-map-list {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  color: #756464;
+  gap: 18px;
+}
+
+.map-map-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(69, 10, 10, 0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.map-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  filter: saturate(1.1);
+}
+
+.map-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.map-caption-pin {
+  color: var(--primary);
+  font-size: 0.85rem;
+  flex: none;
+}
+
+.map-caption-line {
+  display: block;
+  color: #523d3d;
   font-size: 0.88rem;
-  line-height: 1.6;
+  line-height: 1.55;
+}
+
+.footer-map-list .map-caption .map-caption-address .map-caption-line:nth-child(2) {
+  color: #756464;
 }
 
 .footer-bottom {
@@ -454,6 +521,15 @@ a {
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+
+  .footer-map-list .map-map-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .footer-map-list .map-caption {
+    font-size: 0.8rem;
   }
 }
 
